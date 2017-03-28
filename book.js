@@ -10,11 +10,10 @@ $(document).ready(function () {
       			console.log(error);
   			},
   			success: function(data) {
-  				console.log("SUCCESS" + data);
-  				var f = $(data).find('img.thr-pic').attr("src");
-  				f = "http://tarheelreader.org/" + f;
-  				document.getElementById('img').src=f;
-  				console.log(f);
+  				console.log("SUCCESS");
+  				var imgurl = $(data).find('img.thr-pic').attr("src");
+  				imgurl = "http://tarheelreader.org/" + imgurl;
+  				document.getElementById('img').src=imgurl;
   			}
 		})
 	});
