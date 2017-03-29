@@ -1,3 +1,12 @@
-button {
-  color: pink;
+#openbook{
+  color: blue;
+}
+div {
+	margin-right: auto;
+	margin-left: auto;
+	width: 80%;
+}
+.next {
+	float:right;
+	margin-right: 20%;
 }
