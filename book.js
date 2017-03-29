@@ -23,6 +23,7 @@ $(document).ready(function () {
 	  				document.getElementById('openbook').innerHTML="next";
 	  			}
 	  			else {
+	  				document.getElementById('container').innerHTML= "The End";
 
 	  			}	
 
