@@ -8,5 +8,14 @@ div {
 }
 .next {
 	float:right;
-	margin-right: 20%;
+}
+.back  {
+	float: left;
+}
+#image  {
+	margin-right: auto;
+	margin-left: auto;
+}
+.hidden {
+	display: none;
 }
