@@ -5,17 +5,23 @@ $(document).ready(function () {
 	});
 	$('#back').click(function() {
 		number = number - 2;
-		number
 		getData();
 	});
 });
 function animalNoise(text) {
 	var hasGorilla = text.includes("Gorilla");
 	var hasTiger = text.includes("Tiger");
+	var hasPeacock = text.includes("Peacock");
+	var hasFlamingo	= text.includes("Flamingo");
+
 	if(hasGorilla == true) {
 		document.getElementById('audio').innerHTML = "<audio controls autoplay><source src='Gorilla.mp3' type='audio/mpeg'></audio>";
 	} else if(hasTiger == true) {
 		document.getElementById('audio').innerHTML = "<audio controls autoplay><source src='Tiger.mp3' type='audio/mpeg'></audio>";
+	} else if(hasPeacock == true) {
+		document.getElementById('audio').innerHTML = "<audio controls autoplay><source src='Peacock.mp3' type='audio/mpeg'></audio>";
+	} else if(hasFlamingo == true) {
+		document.getElementById('audio').innerHTML = "<audio controls autoplay><source src='http://www.wildlifelands.com/wxs/flamingo.mp3' type='audio/mpeg'></audio>";
 	}
 }
 function getData() {
