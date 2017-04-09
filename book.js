@@ -1,4 +1,6 @@
 var number = 1;
+
+//Buttons
 $(document).ready(function () {
 	$("#openbook").click( function() {
 		number++;
@@ -13,6 +15,7 @@ $(document).ready(function () {
 		getData();
 	});
 });
+
 function animalNoise(text) {
 	var hasGorilla = text.includes("Gorilla");
 	var hasTiger = text.includes("Tiger");
@@ -29,6 +32,7 @@ function animalNoise(text) {
 		document.getElementById('audio').innerHTML = "<audio controls autoplay><source src='http://www.wildlifelands.com/wxs/flamingo.mp3' type='audio/mpeg'></audio>";
 	}
 }
+
 function getData() {
 	$.ajax({
 		dataType: "html",
@@ -42,16 +46,14 @@ function getData() {
   		success: function(data) {
   			if(number <= 12) {
 	  			console.log("SUCCESS");
+
 	  			if(number == 2) {
 	  				initial();
 	  			} else if(number < 3) {
-	  				$("#back").addClass("hidden");
-	  				$("#next").addClass("hidden");
-	  				$("#openbook").removeClass("hidden");
-	  				$("#image").addClass("hidden");
+	  				clearPage();
 	  			}
 
-	  			//reset audio 
+	  			//Reset audio 
 	  			document.getElementById('audio').innerHTML = "";
 
 	  			//Get and set tarheel reader content
@@ -64,21 +66,31 @@ function getData() {
 	  			//If last page then get rid of content and replace with the end
 	  			document.getElementById('container').innerHTML= "The End";
 	  		}
-
 		}
 	})
 }
+
 function initial() {
+	//Get rid of open book button and add back and next
 	$("#back").removeClass("hidden");
 	$("#next").removeClass("hidden");
 	$("#openbook").addClass("hidden");
 	$("#image").removeClass("hidden");
 }
+
 function getTRContent(data) {
 	var imgurl = $(data).find('img.thr-pic').attr("src");
 	imgurl = "http://tarheelreader.org/" + imgurl;
 	document.getElementById('img').src=imgurl;
 	var text = $(data).find('p.thr-caption').text();
-	document.getElementById('text').innerHTML=text;
+	document.getElementById('imgcaption').innerHTML=text;
 	return(text);
+}
+
+function clearPage() {
+	//Add open button and hide next and back
+	$("#back").addClass("hidden");
+	$("#next").addClass("hidden");
+	$("#openbook").removeClass("hidden");
+	$("#image").addClass("hidden");
 }

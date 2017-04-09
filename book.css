@@ -19,3 +19,6 @@ div {
 .hidden {
 	display: none;
 }
+figure {
+	text-align: center;
+}
