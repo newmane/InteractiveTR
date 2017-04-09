@@ -6,7 +6,7 @@ div {
 	margin-left: auto;
 	width: 80%;
 }
-.next {
+#next {
 	float:right;
 }
 .back  {

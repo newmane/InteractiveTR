@@ -7,6 +7,9 @@ $(document).ready(function () {
 		number = number - 2;
 		getData();
 	});
+	$('#next').click(function() {
+		getData();
+	});
 });
 function animalNoise(text) {
 	var hasGorilla = text.includes("Gorilla");
@@ -39,17 +42,18 @@ function getData() {
 	  			number++;
 	  			console.log("SUCCESS");
 	  			if(number == 3) {
-	  				$("#back").removeClass("hidden");
+	  				initial();
+	  			} else if(number < 3) {
+	  				$("#back").addClass("hidden");
+	  				$("#next").addClass("hidden");
+	  				$("#openbook").removeClass("hidden");
+	  				$("#image").addClass("hidden");
 	  			}
+	  			//reset audio 
 	  			document.getElementById('audio').innerHTML = "";
-	  			var imgurl = $(data).find('img.thr-pic').attr("src");
-	  			imgurl = "http://tarheelreader.org/" + imgurl;
-	  			document.getElementById('img').src=imgurl;
-	  			var text = $(data).find('p.thr-caption').text();
-	  			document.getElementById('text').innerHTML=text;
+
+	  			var text = getTRContent(data);
 	  			animalNoise(text);
-	  			$("#openbook").addClass("next");
-	  			document.getElementById('openbook').innerHTML="next";
 	  		}
 	  		else {
 	  			document.getElementById('container').innerHTML= "The End";
@@ -58,4 +62,18 @@ function getData() {
 
 		}
 	})
+}
+function initial() {
+	$("#back").removeClass("hidden");
+	$("#next").removeClass("hidden");
+	$("#openbook").addClass("hidden");
+	$("#image").removeClass("hidden");
+}
+function getTRContent(data) {
+	var imgurl = $(data).find('img.thr-pic').attr("src");
+	imgurl = "http://tarheelreader.org/" + imgurl;
+	document.getElementById('img').src=imgurl;
+	var text = $(data).find('p.thr-caption').text();
+	document.getElementById('text').innerHTML=text;
+	return(text);
 }
