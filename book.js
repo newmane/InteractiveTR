@@ -15,11 +15,11 @@ function animalNoise(text) {
 	var hasFlamingo	= text.includes("Flamingo");
 
 	if(hasGorilla == true) {
-		document.getElementById('audio').innerHTML = "<audio controls autoplay><source src='Gorilla.mp3' type='audio/mpeg'></audio>";
+		document.getElementById('audio').innerHTML = "<audio controls autoplay><source src='audio/Gorilla.mp3' type='audio/mpeg'></audio>";
 	} else if(hasTiger == true) {
-		document.getElementById('audio').innerHTML = "<audio controls autoplay><source src='Tiger.mp3' type='audio/mpeg'></audio>";
+		document.getElementById('audio').innerHTML = "<audio controls autoplay><source src='audio/Tiger.mp3' type='audio/mpeg'></audio>";
 	} else if(hasPeacock == true) {
-		document.getElementById('audio').innerHTML = "<audio controls autoplay><source src='Peacock.mp3' type='audio/mpeg'></audio>";
+		document.getElementById('audio').innerHTML = "<audio controls autoplay><source src='audio/Peacock.mp3' type='audio/mpeg'></audio>";
 	} else if(hasFlamingo == true) {
 		document.getElementById('audio').innerHTML = "<audio controls autoplay><source src='http://www.wildlifelands.com/wxs/flamingo.mp3' type='audio/mpeg'></audio>";
 	}
