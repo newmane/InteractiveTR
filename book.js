@@ -1,13 +1,15 @@
-var number = 2;
+var number = 1;
 $(document).ready(function () {
 	$("#openbook").click( function() {
+		number++;
 		getData();
 	});
 	$('#back').click(function() {
-		number = number - 2;
+		number--;
 		getData();
 	});
 	$('#next').click(function() {
+		number++;
 		getData();
 	});
 });
@@ -39,9 +41,8 @@ function getData() {
   		},
   		success: function(data) {
   			if(number <= 12) {
-	  			number++;
 	  			console.log("SUCCESS");
-	  			if(number == 3) {
+	  			if(number == 2) {
 	  				initial();
 	  			} else if(number < 3) {
 	  				$("#back").addClass("hidden");
@@ -49,16 +50,20 @@ function getData() {
 	  				$("#openbook").removeClass("hidden");
 	  				$("#image").addClass("hidden");
 	  			}
+
 	  			//reset audio 
 	  			document.getElementById('audio').innerHTML = "";
 
+	  			//Get and set tarheel reader content
 	  			var text = getTRContent(data);
+
+	  			//Add animal noises
 	  			animalNoise(text);
 	  		}
 	  		else {
+	  			//If last page then get rid of content and replace with the end
 	  			document.getElementById('container').innerHTML= "The End";
-
-	  		}	
+	  		}
 
 		}
 	})
