@@ -1,6 +1,3 @@
-#openbook{
-  color: blue;
-}
 div {
 	margin-right: auto;
 	margin-left: auto;
@@ -11,10 +8,6 @@ div {
 }
 .back  {
 	float: left;
-}
-#image  {
-	margin-right: auto;
-	margin-left: auto;
 }
 .hidden {
 	display: none;
