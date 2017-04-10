@@ -23,13 +23,13 @@ function animalNoise(text) {
 	var hasFlamingo	= text.includes("Flamingo");
 
 	if(hasGorilla == true) {
-		document.getElementById('audio').innerHTML = "<audio controls autoplay><source src='audio/Gorilla.mp3' type='audio/mpeg'></audio>";
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='audio/Gorilla.mp3' type='audio/mpeg'></audio>";
 	} else if(hasTiger == true) {
-		document.getElementById('audio').innerHTML = "<audio controls autoplay><source src='audio/Tiger.mp3' type='audio/mpeg'></audio>";
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='audio/Tiger.mp3' type='audio/mpeg'></audio>";
 	} else if(hasPeacock == true) {
-		document.getElementById('audio').innerHTML = "<audio controls autoplay><source src='audio/Peacock.mp3' type='audio/mpeg'></audio>";
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='audio/Peacock.mp3' type='audio/mpeg'></audio>";
 	} else if(hasFlamingo == true) {
-		document.getElementById('audio').innerHTML = "<audio controls autoplay><source src='http://www.wildlifelands.com/wxs/flamingo.mp3' type='audio/mpeg'></audio>";
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='http://www.wildlifelands.com/wxs/flamingo.mp3' type='audio/mpeg'></audio>";
 	}
 }
 
@@ -47,8 +47,9 @@ function getData() {
   			if(number <= 12) {
 	  			console.log("SUCCESS");
 
-	  			if(number == 2) {
+	  			if(number == 2 || number == 11) {
 	  				initial();
+	  				document.getElementById('enddiv').innerHTML= "";
 	  			} else if(number < 3) {
 	  				clearPage();
 	  			}
@@ -64,7 +65,10 @@ function getData() {
 	  		}
 	  		else {
 	  			//If last page then get rid of content and replace with the end
-	  			document.getElementById('container').innerHTML= "The End";
+	  			clearPage();
+	  			$("#openbook").addClass("hidden");
+	  			document.getElementById('enddiv').innerHTML= "The End";
+	  			number--;
 	  		}
 		}
 	})
@@ -93,4 +97,32 @@ function clearPage() {
 	$("#next").addClass("hidden");
 	$("#openbook").removeClass("hidden");
 	$("#image").addClass("hidden");
+}
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+    e = e || window.event;
+
+    if (e.keyCode == '38') {
+        // up arrow
+        document.getElementById('audiotag').currentTime=0;
+        document.getElementById('audiotag').play();
+
+    }
+    else if (e.keyCode == '40') {
+        // down arrow
+    }
+    else if (e.keyCode == '37') {
+       // left arrow
+    	number--;
+		getData();
+
+    }
+    else if (e.keyCode == '39') {
+       // right arrow
+        number++;
+		getData();
+    }
+
 }
