@@ -21,6 +21,12 @@ function animalNoise(text) {
 	var hasTiger = text.includes("Tiger");
 	var hasPeacock = text.includes("Peacock");
 	var hasFlamingo	= text.includes("Flamingo");
+	var hasGiraffe = text.includes("Giraffe");
+	var hasPolarBear = text.includes("Polar");
+	var hasBird = text.includes("Birds");
+	var hasElephant=text.includes("Elephants");
+	var hasCamel=text.includes("Camels");
+	var hasAnimals=text.includes("animals");
 
 	if(hasGorilla == true) {
 		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='audio/Gorilla.mp3' type='audio/mpeg'></audio>";
@@ -30,6 +36,18 @@ function animalNoise(text) {
 		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='audio/Peacock.mp3' type='audio/mpeg'></audio>";
 	} else if(hasFlamingo == true) {
 		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='http://www.wildlifelands.com/wxs/flamingo.mp3' type='audio/mpeg'></audio>";
+	}else if(hasGiraffe== true){
+		document.getElementById('audio').innerHTML= "<audio id ='audiotag' controls autoplay><source src='audio/Giraffe.mp3' type='audio/mpeg'></audio>";
+	}	else if(hasPolarBear== true){
+		document.getElementById('audio').innerHTML= "<audio id ='audiotag' controls autoplay><source src='audio/PolarBear.mp3' type='audio/mpeg'></audio>";
+	}else if(hasBird== true){
+		document.getElementById('audio').innerHTML= "<audio id ='audiotag' controls autoplay><source src='audio/Parrot.mp3' type='audio/mpeg'></audio>";
+	}else if(hasElephant== true){
+		document.getElementById('audio').innerHTML= "<audio id ='audiotag' controls autoplay><source src='audio/Elephant.mp3' type='audio/mpeg'></audio>";
+	}else if(hasCamel== true){
+		document.getElementById('audio').innerHTML= "<audio id ='audiotag' controls autoplay><source src='audio/Camel.mp3' type='audio/mpeg'></audio>";
+	}else if(hasAnimals== true){
+		document.getElementById('audio').innerHTML= "<audio id ='audiotag' controls autoplay><source src='audio/Zoo.mp3' type='audio/mpeg'></audio>";
 	}
 }
 
@@ -54,7 +72,7 @@ function getData() {
 	  				clearPage();
 	  			}
 
-	  			//Reset audio 
+	  			//Reset audio
 	  			document.getElementById('audio').innerHTML = "";
 
 	  			//Get and set tarheel reader content
