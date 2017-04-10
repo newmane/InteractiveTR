@@ -112,6 +112,13 @@ function checkKey(e) {
     }
     else if (e.keyCode == '40') {
         // down arrow
+        var audio = document.getElementById('audiotag')
+        if(audio.paused) {
+        	audio.play();
+        } else {
+        	audio.pause();
+        }
+
     }
     else if (e.keyCode == '37') {
        // left arrow
