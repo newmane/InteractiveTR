@@ -1,4 +1,5 @@
 var number = 1;
+document.onkeydown = checkKey;
 
 //Buttons
 $(document).ready(function () {
@@ -36,18 +37,18 @@ function animalNoise(text) {
 		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='audio/Peacock.mp3' type='audio/mpeg'></audio>";
 	} else if(hasFlamingo == true) {
 		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='http://www.wildlifelands.com/wxs/flamingo.mp3' type='audio/mpeg'></audio>";
-	}else if(hasGiraffe== true){
-		document.getElementById('audio').innerHTML= "<audio id ='audiotag' controls autoplay><source src='audio/Giraffe.mp3' type='audio/mpeg'></audio>";
-	}	else if(hasPolarBear== true){
-		document.getElementById('audio').innerHTML= "<audio id ='audiotag' controls autoplay><source src='audio/PolarBear.mp3' type='audio/mpeg'></audio>";
-	}else if(hasBird== true){
-		document.getElementById('audio').innerHTML= "<audio id ='audiotag' controls autoplay><source src='audio/Parrot.mp3' type='audio/mpeg'></audio>";
-	}else if(hasElephant== true){
-		document.getElementById('audio').innerHTML= "<audio id ='audiotag' controls autoplay><source src='audio/Elephant.mp3' type='audio/mpeg'></audio>";
-	}else if(hasCamel== true){
-		document.getElementById('audio').innerHTML= "<audio id ='audiotag' controls autoplay><source src='audio/Camel.mp3' type='audio/mpeg'></audio>";
-	}else if(hasAnimals== true){
-		document.getElementById('audio').innerHTML= "<audio id ='audiotag' controls autoplay><source src='audio/Zoo.mp3' type='audio/mpeg'></audio>";
+	} else if(hasGiraffe == true) {
+		document.getElementById('audio').innerHTML = "<audio id ='audiotag' controls autoplay><source src='audio/Giraffe.mp3' type='audio/mpeg'></audio>";
+	} else if(hasPolarBear == true) {
+		document.getElementById('audio').innerHTML = "<audio id ='audiotag' controls autoplay><source src='audio/PolarBear.mp3' type='audio/mpeg'></audio>";
+	} else if(hasBird == true) {
+		document.getElementById('audio').innerHTML = "<audio id ='audiotag' controls autoplay><source src='audio/Parrot.mp3' type='audio/mpeg'></audio>";
+	} else if(hasElephant == true) {
+		document.getElementById('audio').innerHTML = "<audio id ='audiotag' controls autoplay><source src='audio/Elephant.mp3' type='audio/mpeg'></audio>";
+	} else if(hasCamel == true) {
+		document.getElementById('audio').innerHTML = "<audio id ='audiotag' controls autoplay><source src='audio/Camel.mp3' type='audio/mpeg'></audio>";
+	} else if(hasAnimals == true) {
+		document.getElementById('audio').innerHTML = "<audio id ='audiotag' controls autoplay><source src='audio/Zoo.mp3' type='audio/mpeg'></audio>";
 	}
 }
 
@@ -85,7 +86,7 @@ function getData() {
 	  			//If last page then get rid of content and replace with the end
 	  			clearPage();
 	  			$("#openbook").addClass("hidden");
-	  			document.getElementById('enddiv').innerHTML= "The End";
+	  			document.getElementById('enddiv').innerHTML= "The End <button type=button><a href='game.html'>Play Game</a</button>";
 	  			number--;
 	  		}
 		}
@@ -116,7 +117,6 @@ function clearPage() {
 	$("#openbook").removeClass("hidden");
 	$("#image").addClass("hidden");
 }
-document.onkeydown = checkKey;
 
 function checkKey(e) {
 
@@ -130,7 +130,7 @@ function checkKey(e) {
     }
     else if (e.keyCode == '40') {
         // down arrow
-        var audio = document.getElementById('audiotag')
+        var audio = document.getElementById('audiotag');
         if(audio.paused) {
         	audio.play();
         } else {
