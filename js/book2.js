@@ -18,6 +18,7 @@ function animalNoise(text) {
 	}
 }
 
+
 function getData() {
 	$.ajax({
 		dataType: "html",

@@ -52,8 +52,6 @@ function checkKey(e) {
     if (e.keyCode == '38') {
         // up arrow
         check();
-
-
     }
     else if (e.keyCode == '40') {
         // down arrow
