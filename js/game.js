@@ -38,7 +38,7 @@ function getData(number) {
 			if(tdnumber == 5) {
 				audiotag = "<audio id='audiotag5' controls><source src='http://www.wildlifelands.com/wxs/flamingo.mp3' type='audio/mpeg'></audio>";
 			} else {
-				audiotag = "<audio id='audiotag" + tdnumber + "' controls><source src='audio/" + animal + ".mp3' type='audio/mpeg'></audio>";
+				audiotag = "<audio id='audiotag" + tdnumber + "' controls><source src='../audio/" + animal + ".mp3' type='audio/mpeg'></audio>";
 			}
 			console.log(audiotag);
 			document.getElementById(audionum).innerHTML = audiotag;
@@ -123,9 +123,9 @@ function previous() {
 	audio.play();
 }
 function rightAnswer() {
-	document.getElementById('img6').src= "Dog.jpg";
+	document.getElementById('img6').src= "../Dog.jpg";
 	document.getElementById('imgcaption6').innerHTML="Dog";
-	document.getElementById('audio6').innerHTML = "<audio id='audiotag6' controls><source src='audio/Dog.mp3' type='audio/mpeg'></audio>";
+	document.getElementById('audio6').innerHTML = "<audio id='audiotag6' controls><source src='../audio/Dog.mp3' type='audio/mpeg'></audio>";
 }
 
 function check() {
