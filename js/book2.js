@@ -9,13 +9,48 @@ $(document).ready(function () {
 	}
 });
 
-function animalNoise(text) {
-	var hasGorilla = text.includes("Gorilla");
+function TransportNoise(text) {
+	var hasAmbulance = text.includes("ambulance");
+	var hasAirport = text.includes("airport");
+	var hasBike = text.includes(" bike");
+	var hasBus = text.includes("bus");
+	var hasBoat = text.includes("boat");
+	var hasCar = text.includes("r car");
+	var hasCrash = text.includes("crash");
+	var hasDrive = text.includes("drive");
+	var hasFireTruck = text.includes("fire truck");
+	var hasFly = text.includes("fly");
 
-
-	if(hasGorilla == true) {
-		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='audio/Gorilla.mp3' type='audio/mpeg'></audio>";
+	if(hasAmbulance == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Ambulance.mp3' type='audio/mpeg'></audio>";
 	}
+	if(hasAirport == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Airplane.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasBike == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Bike.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasBus == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Bus.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasBoat == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Boat.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasCar == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Car.mp3' type='audio/mpeg'></audio>";
+	}
+		if(hasCrash == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Crash.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasDrive == true) {
+	document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Drive.mp3' type='audio/mpeg'></audio>";
+}
+if(hasFireTruck == true) {
+document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/FireTruck.mp3' type='audio/mpeg'></audio>";
+}
+if(hasFly == true) {
+document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Fly.mp3' type='audio/mpeg'></audio>";
+}
 }
 
 
@@ -36,13 +71,13 @@ function getData() {
 	  			if(number == 2 || number == 31) {
 	  				initial();
 	  				document.getElementById('enddiv').innerHTML= "";
-	  			} 
+	  			}
 
 	  			if(number == 2) {
 	  				$("#imgcaption").addClass("bold");
 	  			} else {
 	  				$("#imgcaption").removeClass("bold");
-	  			} 
+	  			}
 
 	  			//Reset audio
 	  			document.getElementById('audio').innerHTML = "";
@@ -51,7 +86,7 @@ function getData() {
 	  			var text = getTRContent(data);
 
 	  			//Add animal noises
-	  			animalNoise(text);
+	  			TransportNoise(text);
 	  		}
 	  		else {
 	  			//If last page then get rid of content and replace with the end
