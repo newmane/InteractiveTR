@@ -18,7 +18,7 @@ function TransportNoise(text) {
 	var hasCar = text.includes("r car");
 	var hasCrash = text.includes("crash");
 	var hasDrive = text.includes("drive");
-	var hasFireTruck = text.includes("fire truck");
+	var hasFireTruck = text.includes("fire");
 	var hasFly = text.includes("fly");
 	var hasGarage = text.includes("garage");
 	var hasHelicopter = text.includes("helicopter");
@@ -34,7 +34,7 @@ function TransportNoise(text) {
 	var hasSiren = text.includes("siren");
 	var hasTrain = text.includes("train");
 	var hasTram = text.includes("tram");
-	var hasTruck = text.includes("truck");
+	var hasTruck = text.includes("for truck");
 	var hasTaxi = text.includes("taxi");
 	var hasTractor= text.includes("tractor");
 	var hasTrafficLight = text.includes("traffic light");
@@ -63,60 +63,71 @@ function TransportNoise(text) {
 		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Crash.mp3' type='audio/mpeg'></audio>";
 	}
 	if(hasDrive == true) {
-	document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Drive.mp3' type='audio/mpeg'></audio>";
-}
-if(hasFireTruck == true) {
-document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/FireTruck.mp3' type='audio/mpeg'></audio>";
-}
-if(hasFly == true) {
-document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Fly.mp3' type='audio/mpeg'></audio>";
-}
-if(hasGarage == true) {
-document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Garage.mp3' type='audio/mpeg'></audio>";
-}
-if(hasHelicopter == true) {
-document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Helicopter.mp3' type='audio/mpeg'></audio>";
-}
-if(hasMotorbike == true) {
-document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Motorbike.mp3' type='audio/mpeg'></audio>";
-}
-if(hasPlane == true) {
-document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Plane.mp3' type='audio/mpeg'></audio>";
-}
-if(hasPoliceCar == true) {
-document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/PoliceCar.mp3' type='audio/mpeg'></audio>";
-}
-if(hasPetrolStation == true) {
-document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/PetrolStation.mp3' type='audio/mpeg'></audio>";
-}
-if(hasRide == true) {
-document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Ride.mp3' type='audio/mpeg'></audio>";
-}
-if(hasRocket == true) {
-document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Rocket.mp3' type='audio/mpeg'></audio>";
-}if(hasRoad== true) {
-document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Road.mp3' type='audio/mpeg'></audio>";
-}if(hasStation == true) {
-document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Station.mp3' type='audio/mpeg'></audio>";
-}if(hasShip == true) {
-document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Ship.mp3' type='audio/mpeg'></audio>";
-}if(hasSiren == true) {
-document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Siren.mp3' type='audio/mpeg'></audio>";
-}if(hasTrain == true) {
-document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Train.mp3' type='audio/mpeg'></audio>";
-}if(hasTram == true) {
-document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Tram.mp3' type='audio/mpeg'></audio>";
-}if(hasTruck == true) {
-document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Truck.mp3' type='audio/mpeg'></audio>";
-}if(hasTaxi == true) {
-document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Taxi.mp3' type='audio/mpeg'></audio>";
-}if(hasTractor == true) {
-document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Tractor.mp3' type='audio/mpeg'></audio>";
-}if(hasTrafficLight == true) {
-document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/TrafficLight.mp3' type='audio/mpeg'></audio>";
-}if(hasTransport == true) {
-document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Transport.mp3' type='audio/mpeg'></audio>";
-}
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Drive.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasFireTruck == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/FireTruck.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasFly == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Fly.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasGarage == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Garage.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasHelicopter == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Helicopter.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasMotorbike == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Motorbike.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasPlane == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Plane.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasPoliceCar == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/PoliceCar.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasPetrolStation == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/PetrolStation.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasRide == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Ride.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasRocket == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Rocket.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasRoad== true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Road.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasStation == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Station.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasShip == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Ship.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasSiren == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Siren.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasTrain == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Train.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasTram == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Tram.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasTruck == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Truck.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasTaxi == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Taxi.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasTractor == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Tractor.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasTrafficLight == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/TrafficLight.mp3' type='audio/mpeg'></audio>";
+	}
+	if(hasTransport == true) {
+		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/Transport.mp3' type='audio/mpeg'></audio>";
+	}
 }
 
 
