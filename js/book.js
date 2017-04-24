@@ -82,7 +82,7 @@ function getData() {
 	  			//If last page then get rid of content and replace with the end
 	  			clearPage();
 	  			$("#openbook").addClass("hidden");
-	  			document.getElementById('enddiv').innerHTML= "The End <button type=button><a href='game.html'>Play Game</a</button>";
+	  			document.getElementById('enddiv').innerHTML= "The End";
 	  		}
 		}
 	})
@@ -141,6 +141,8 @@ function checkKey(e) {
        if(number <= 12) {
        	number++;
        	getData();
+       } else {
+       	window.location.replace("../html/game.html");
        }
     }
 
