@@ -11,7 +11,7 @@ table {
 	margin-left: auto;
 	margin-right: auto;
 }
-img {
+figure img {
 	height: 150px;
 }
 .selected {
@@ -25,4 +25,22 @@ figure {
 }
 h2 {
 	font-size: 80%;
+}
+a {
+	float: right;
+}
+.home {
+	width: 20%;
+	float: right;
+}
+div {
+	padding: 5%;
+}
+#big {
+	text-align: center;
+	font-size: 200%;
+	font-weight: bold;
+}
+a:hover {
+	width: 25%;
 }

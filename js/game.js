@@ -130,7 +130,7 @@ function check() {
 	var captionnum = 'imgcaption' + selectednumber;
 	var curAnimal = document.getElementById(captionnum).innerHTML;
 	if(curAnimal == "Dog") {
-		document.getElementById('container').innerHTML = "CONGRATS!";
+		document.getElementById('container').innerHTML = "<p id='big'>CONGRATS!</p>";
 	} else {
 		alert("Try Again")
 	}
