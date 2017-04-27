@@ -16,10 +16,6 @@ div {
 figure {
 	text-align: center;
 }
-figcaption{
-	font-size:75px; 
-	font-weight:bold;
-}
 .bold {
 	font-weight: bold;
 	font-size: 200%;
@@ -27,8 +23,6 @@ figcaption{
 .openbook {
 	height: 300px;
 }
-<<<<<<< HEAD
-=======
 #homebutton:hover {
 	width: 25%;
 }
@@ -42,4 +36,3 @@ h1 {
 	width: 20%;
 	float: right;
 }
->>>>>>> 37109d1516bf8db8c528a1c2e56c3b9778aaa2f7
