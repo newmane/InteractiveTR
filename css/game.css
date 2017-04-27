@@ -26,7 +26,7 @@ figure {
 h2 {
 	font-size: 80%;
 }
-a {
+#homebutton {
 	float: right;
 }
 .home {
@@ -41,6 +41,6 @@ div {
 	font-size: 200%;
 	font-weight: bold;
 }
-a:hover {
+#homebutton:hover {
 	width: 25%;
 }

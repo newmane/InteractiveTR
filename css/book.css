@@ -23,13 +23,13 @@ figure {
 .openbook {
 	height: 300px;
 }
-a:hover {
+#homebutton:hover {
 	width: 25%;
 }
 h1 {
 	text-align: center;
 }
-a {
+#homebutton {
 	float: right;
 }
 .home {
