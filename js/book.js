@@ -67,7 +67,7 @@ function getData() {
 	  				$("#imgcaption").addClass("bold");
 	  			} else {
 	  				$("#imgcaption").removeClass("bold");
-	  			} 
+	  			}
 
 	  			//Reset audio
 	  			document.getElementById('audio').innerHTML = "";
@@ -143,5 +143,6 @@ function checkKey(e) {
        	getData();
        }
     }
+
 
 }

@@ -15,6 +15,10 @@ div {
 figure {
 	text-align: center;
 }
+figcaption{
+	font-size:75px; 
+	font-weight:bold;
+}
 .bold {
 	font-weight: bold;
 	font-size: 200%;

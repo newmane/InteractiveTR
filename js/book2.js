@@ -1,6 +1,6 @@
 var number = 1;
 document.onkeydown = checkKey;
-
+document.onclick=movePage;
 //Buttons
 $(document).ready(function () {
 	if(number == 1) {
@@ -194,7 +194,12 @@ function clearPage() {
 	//Add open button and hide next and back
 	$("#image").addClass("hidden");
 }
-
+function movePage(){
+	if(number <= 31) {
+	 number++;
+	 getData();
+	}
+}
 
 function checkKey(e) {
 
@@ -230,5 +235,6 @@ function checkKey(e) {
        	getData();
        }
     }
+
 
 }
