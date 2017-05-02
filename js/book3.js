@@ -1,7 +1,7 @@
 var number = 0;
 document.onkeydown = checkKey;
 var images = ['america', 'france', 'portugal', 'spain', 'china', 'italian', 'russian'];
-var text = ['Hello', 'Bonjour', 'Olá', 'Hola', '你好', 'Ciao', 'Здравствуйте'];
+var text = ['Hello in english', 'Hello in french is Bonjour', 'Hello in portugese is Olá', 'Hello in spanish is Hola', 'Hello in chinese is Ni Hao', 'Hello in italian is Ciao', 'Hello in Russian is Zdravstvuyte'];
 var audiosounds =['USA','France','Portugal','Spain','China','Italy','Russia'];
 
 //Buttons

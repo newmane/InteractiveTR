@@ -23,8 +23,8 @@ figure img {
 	height:350px;
 }
 .bold {
-	font-weight: bold;
-	font-size: 200%;
+	border: 5px black solid;
+	margin-bottom: 10px;
 }
 #homebutton:hover {
 	width: 25%;
@@ -56,9 +56,13 @@ button.nav {
 	height: 100px;
 	width: 100px;
 	background-color: green;
+	font-size: 110%;
 }
 button.right {
 	float: right;
 	clear: both;
 	display: inline;
+}
+img.flag {
+	border: 4px solid black;
 }

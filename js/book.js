@@ -147,6 +147,9 @@ function checkKey(e) {
     }
 
 }
+$(window).click(function(e) {
+    right();
+});
 
 function right() {
 	if(number <= 12) {
