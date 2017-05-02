@@ -15,7 +15,7 @@ function getData() {
   	if(number <= 6) {
 		document.getElementById('img').src='../images/' + images[number]  + '.jpg';
 		document.getElementById('imgcaption').innerHTML=text[number];
-		document.getElementById('audio').innerHTML="<audio id='audiotag' controls autoplay><source src='../audio/ " + audio[number] + "' type='audio/mpeg'></audio>";
+		document.getElementById('audio').innerHTML="<audio id='audiotag' controls autoplay><source src='../audio/ " + audio[number] + " type='audio/mpeg'></audio>";
 
 		if(number == 0 || number == 6) {
 			$("#image").removeClass("hidden");
