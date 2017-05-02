@@ -13,7 +13,9 @@ $(document).ready(function () {
 
 function getData() {
   	if(number <= 6) {
-		document.getElementById('img').src='../images/' + images[number]  + '.jpg';
+		var i = document.getElementById('img').
+		i.src='../images/' + images[number]  + '.jpg';
+		i.alt= "flag from " + images[number]; 
 		document.getElementById('imgcaption').innerHTML=text[number];
  		document.getElementById('audio').innerHTML = "<audio id='audiotag' controls autoplay><source src='../audio/" + audiosounds[number]+ ".mp3' type='audio/mpeg'></audio>";
 
