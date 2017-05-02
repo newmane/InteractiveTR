@@ -136,7 +136,7 @@ function checkKey(e) {
 		getData();
 	   }
     }
-    else if (e.keyCode == '39' || e.keyCode == '32'|| e.keyCode == '13') {
+    else if (e.keyCode == '39' || e.keyCode == '32') {
        // right arrow
        if(number <= 12) {
        	number++;
@@ -146,5 +146,19 @@ function checkKey(e) {
        }
     }
 
+}
 
+function right() {
+	if(number <= 12) {
+       	number++;
+       	getData();
+       } else {
+       	window.location.replace("../html/game.html");
+       }
+}
+function left() {
+	if(number > 2) {
+       	number--;
+		getData();
+	   }
 }
