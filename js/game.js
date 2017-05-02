@@ -121,7 +121,7 @@ function previous() {
 	audio.play();
 }
 function rightAnswer() {
-	document.getElementById('img6').src= "../Dog.jpg";
+	document.getElementById('img6').src= "../images/Dog.jpg";
 	document.getElementById('imgcaption6').innerHTML="Dog";
 	document.getElementById('audio6').innerHTML = "<audio id='audiotag6' controls><source src='../audio/Dog.mp3' type='audio/mpeg'></audio>";
 }

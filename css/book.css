@@ -23,9 +23,6 @@ figcaption{
 	font-weight: bold;
 	font-size: 200%;
 }
-.openbook {
-	height: 300px;
-}
 #homebutton:hover {
 	width: 25%;
 }
@@ -38,4 +35,17 @@ h1 {
 .home {
 	width: 20%;
 	float: right;
+}
+
+td {
+	vertical-align: top;
+	height: 10%;
+	text-align: center;
+}
+table {
+	margin-left: auto;
+	margin-right: auto;
+}
+a img.openbook { 
+	height: 350px;
 }
