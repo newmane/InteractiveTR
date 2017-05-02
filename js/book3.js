@@ -13,7 +13,7 @@ $(document).ready(function () {
 
 function getData() {
   	if(number <= 6) {
-		var i = document.getElementById('img').
+		var i = document.getElementById('img');
 		i.src='../images/' + images[number]  + '.jpg';
 		i.alt= "flag from " + images[number]; 
 		document.getElementById('imgcaption').innerHTML=text[number];
@@ -78,6 +78,17 @@ function checkKey(e) {
        	getData();
        }
     }
+}
+function left() {
+	if(number > 0) {
+       	number--;
+		getData();
+	   }
 
-
+}
+function right() {
+	if(number <= 6) {
+       	number++;
+       	getData();
+       }
 }

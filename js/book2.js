@@ -240,3 +240,19 @@ function checkKey(e) {
 
 
 }
+
+function right() {
+	if(number <= 31) {
+       	number++;
+       	getData();
+       } else {
+       	window.location.replace("../html/game2.html");
+       }
+	
+}
+function left() {
+	if(number > 2) {
+       	number--;
+		getData();
+	   }
+}

@@ -16,10 +16,12 @@
 <body>
   <a id="homebutton" href="../index.html"><img class="home" src="../oldwell.jpg"></a>
   <div id="container">
-    <h1>Tarheel Reader</h1>
+    <button type="button" class="nav left" onClick="left();">Back</button>
+    
+    <button type="button" class="nav right" onClick="right();">Forward</button>
   	<figure id="image">
   		<img id="img" src="">
-		<div aria-hidden ="true" id="audio"></div>
+		<div aria-hidden ="true" id="audio" class="hidden"></div>
       	<figcaption id="imgcaption"></figcaption>
   	</figure>
   </div>

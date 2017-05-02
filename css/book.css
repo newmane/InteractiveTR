@@ -55,8 +55,10 @@ a img.openbook {
 button.nav {
 	height: 100px;
 	width: 100px;
+	background-color: green;
 }
 button.right {
 	float: right;
+	clear: both;
 	display: inline;
 }
