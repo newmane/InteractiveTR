@@ -82,6 +82,7 @@ function getData() {
 	  			//If last page then get rid of content and replace with the end
 	  			clearPage();
 	  			$("#openbook").addClass("hidden");
+
 	  			document.getElementById('enddiv').innerHTML= "The End";
 	  		}
 		}
@@ -92,6 +93,7 @@ function initial() {
 	//Get rid of open book button and add back and next
 	$("#openbook").addClass("hidden");
 	$("#image").removeClass("hidden");
+	$("#enddiv").addClass("hidden");
 }
 
 function getTRContent(data) {
@@ -107,6 +109,7 @@ function clearPage() {
 	//Add open button and hide next and back
 	$("#openbook").removeClass("hidden");
 	$("#image").addClass("hidden");
+	$("#enddiv").removeClass("hidden");
 }
 
 function checkKey(e) {
