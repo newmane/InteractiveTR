@@ -136,7 +136,7 @@ function checkKey(e) {
 		getData();
 	   }
     }
-    else if (e.keyCode == '39' || e.keyCode == '32') {
+    else if (e.keyCode == '39' || e.keyCode == '32' || e.keyCode == '27') {
        // right arrow
        if(number <= 12) {
        	number++;
