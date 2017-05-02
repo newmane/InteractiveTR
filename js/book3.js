@@ -2,6 +2,7 @@ var number = 0;
 document.onkeydown = checkKey;
 var images = ['america', 'france', 'portugal', 'spain', 'china', 'italian', 'russian'];
 var text = ['Hello', 'Bonjour', 'Olá', 'Hola', '你好', 'Ciao', 'Здравствуйте'];
+var audio=['USA','France','Portugal','Spain','China','Italy','Russia'];
 
 //Buttons
 $(document).ready(function () {
@@ -14,6 +15,7 @@ function getData() {
   	if(number <= 6) {
 		document.getElementById('img').src='../images/' + images[number]  + '.jpg';
 		document.getElementById('imgcaption').innerHTML=text[number];
+		document.getElementById('audio').innerHTML="<audio id='audiotag' controls autoplay><source src='../audio/ " + audio[number] + "' type='audio/mpeg'></audio>";
 
 		if(number == 0 || number == 6) {
 			$("#image").removeClass("hidden");
@@ -72,7 +74,7 @@ function checkKey(e) {
        if(number <= 6) {
        	number++;
        	getData();
-       } 
+       }
     }
 
 
