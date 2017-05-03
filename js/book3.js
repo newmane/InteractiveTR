@@ -22,6 +22,8 @@ function getData() {
 		if(number == 0 || number == 6) {
 			$("#image").removeClass("hidden");
 			$("#enddiv").addClass("hidden");
+      $("#forward").removeClass("hidden");
+      $("#back").removeClass("hidden");
 			document.getElementById('enddiv').innerHTML= "";
 		}
 
@@ -35,13 +37,15 @@ function getData() {
 	else {
 		//If last page then get rid of content and replace with the end
 		clearPage();
-		document.getElementById('enddiv').innerHTML= "The End";
+		document.getElementById('enddiv').innerHTML= "The End <br><button class='game' onClick='switchpage();'>Go to Game</button>";
 	 }
 }
 function clearPage() {
 	//Add open button and hide next and back
 	$("#image").addClass("hidden");
 	$("#enddiv").removeClass("hidden");
+  $("#forward").addClass("hidden");
+  $("#back").addClass("hidden");
 }
 
 
@@ -97,4 +101,7 @@ function right() {
        } else {
        	window.location.replace("../html/game3.html");
        }
+}
+function switchpage() {
+  window.location.replace("../html/game3.html");
 }

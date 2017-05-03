@@ -83,7 +83,7 @@ function getData() {
 	  			clearPage();
 	  			$("#openbook").addClass("hidden");
 
-	  			document.getElementById('enddiv').innerHTML= "The End";
+	  			document.getElementById('enddiv').innerHTML= "The End <br><br><button class='game' onClick='switchpage();'>Go to Game</button>";
 	  		}
 		}
 	})
@@ -94,6 +94,8 @@ function initial() {
 	$("#openbook").addClass("hidden");
 	$("#image").removeClass("hidden");
 	$("#enddiv").addClass("hidden");
+	$("#back").removeClass("hidden");
+	$("#forward").removeClass("hidden");
 }
 
 function getTRContent(data) {
@@ -112,6 +114,8 @@ function clearPage() {
 	$("#openbook").removeClass("hidden");
 	$("#image").addClass("hidden");
 	$("#enddiv").removeClass("hidden");
+	$("#back").addClass("hidden");
+	$("#forward").addClass("hidden");
 }
 
 function checkKey(e) {
@@ -166,4 +170,8 @@ function left() {
        	number--;
 		getData();
 	   }
+}
+function switchpage() {
+	window.location.replace("../html/game.html");
+
 }

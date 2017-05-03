@@ -168,7 +168,7 @@ function getData() {
 	  			//If last page then get rid of content and replace with the end
 	  			clearPage();
 	  			$("#openbook").addClass("hidden");
-	  			document.getElementById('enddiv').innerHTML= "The End";
+	  			document.getElementById('enddiv').innerHTML= "The End <br><button class='game' onClick='switchpage();'>Go to Game</button>";
 	  		}
 		}
 	})
@@ -179,6 +179,8 @@ function initial() {
 	$("#openbook").addClass("hidden");
 	$("#image").removeClass("hidden");
 	$("#enddiv").addClass("hidden");
+	$("#back").removeClass("hidden");
+	$("#forward").removeClass("hidden");
 }
 
 function getTRContent(data) {
@@ -196,6 +198,8 @@ function clearPage() {
 	//Add open button and hide next and back
 	$("#enddiv").removeClass("hidden");
 	$("#image").addClass("hidden");
+	$("#back").addClass("hidden");
+	$("#forward").addClass("hidden");
 }
 function movePage(){
 	if(number <= 31) {
@@ -256,4 +260,8 @@ function left() {
        	number--;
 		getData();
 	}
+}
+function switchpage() {
+	window.location.replace("../html/game2.html");
+
 }

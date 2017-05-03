@@ -62,8 +62,13 @@ button.nav {
 button.right {
 	float: right;
 	clear: both;
-	display: inline;
 }
 img.flag {
 	border: 4px solid black;
+}
+.game {
+	height: 50px;
+	width: 80px;
+	background-color: blue;
+
 }
