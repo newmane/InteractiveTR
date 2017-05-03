@@ -77,7 +77,7 @@ function TransportNoise(text) {
 	var name;
 	var hasAmbulance = text.includes("ambulance");
 	var hasAirport = text.includes("airport");
-	var hasBike = text.includes("bike");
+	var hasBike = text.includes(" bike");
 	var hasBus = text.includes("bus");
 	var hasBoat = text.includes("boat");
 	var hasCar = text.includes("r car");
