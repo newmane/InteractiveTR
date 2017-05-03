@@ -234,19 +234,14 @@ function checkKey(e) {
     }
     else if (e.keyCode == '39') {
        // right arrow
-       if(number <= 31) {
-       	number++;
-       	getData();
-       } else {
-       	window.location.replace("../html/game2.html");
-       }
+       right();
     }
 
 
 }
 
 function right() {
-	if(number <= 31) {
+	if(number <= 30) {
        	number++;
        	getData();
        } else {

@@ -72,20 +72,14 @@ function checkKey(e) {
     }
     else if (e.keyCode == '37') {
        // left arrow
-       if(number > 0) {
-       	number--;
-		getData();
-	   }
+      left();
     }
     else if (e.keyCode == '39' || e.keyCode == '32') {
        // right arrow
        if(number <= 6) {
-       	number++;
-       	getData();
-       } else  {
-       	window.location.replace("../html/game3.html");
-       }
+       	right();
     }
+  }
 }
 function left() {
 	if(number > 0) {
@@ -95,7 +89,7 @@ function left() {
 
 }
 function right() {
-	if(number <= 6) {
+	if(number <= 5) {
        	number++;
        	getData();
        } else {
