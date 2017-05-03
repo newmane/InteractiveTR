@@ -1,0 +1,11 @@
+#big {
+	text-align: center;
+	font-size: 200%;
+	font-weight: bold;
+}
+img {
+	width: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
