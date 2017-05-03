@@ -99,9 +99,9 @@ function initial() {
 function getTRContent(data) {
 	var imgurl = $(data).find('img.thr-pic').attr("src");
 	imgurl = "http://tarheelreader.org/" + imgurl;
-	var i =	document.getElementById('img'); 
+	var i =	document.getElementById('img');
 	i.src=imgurl;
-	i.alt="Picture of animal"
+	i.alt="Picture of animal"; 
 	var text = $(data).find('p.thr-caption').text();
 	document.getElementById('imgcaption').innerHTML=text;
 	return(text);
