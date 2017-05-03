@@ -184,7 +184,9 @@ function initial() {
 function getTRContent(data) {
 	var imgurl = $(data).find('img.thr-pic').attr("src");
 	imgurl = "http://tarheelreader.org/" + imgurl;
-	document.getElementById('img').src=imgurl;
+	document.getElementById('img')=i; 
+	i.src=imgurl;
+	i.alt="Picture of Transportation"
 	var text = $(data).find('p.thr-caption').text();
 	document.getElementById('imgcaption').innerHTML=text;
 	return(text);
@@ -246,7 +248,7 @@ function right() {
        } else {
        	window.location.replace("../html/game2.html");
        }
-	
+
 }
 function left() {
 	console.log(number);
