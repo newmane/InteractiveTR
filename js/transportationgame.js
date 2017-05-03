@@ -355,7 +355,7 @@ function right() {
 function checkAnswer() {
 	for(i=0; i< answers[randnumber].length; i++) {
 		if(answers[randnumber][i] == type) {
-			document.getElementById('container').innerHTML = "<p id='big'>CONGRATS!</p><h1>Press down to play again</h1>";
+			window.location.replace("../html/congrats.html");
 			return;
 		}
 	}
