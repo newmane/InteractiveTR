@@ -186,7 +186,7 @@ function getTRContent(data) {
 	imgurl = "http://tarheelreader.org/" + imgurl;
 	var i = document.getElementById('img'); 
 	i.src=imgurl;
-	i.alt="Picture of Transportation"
+	i.alt="Picture of Transportation";
 	var text = $(data).find('p.thr-caption').text();
 	document.getElementById('imgcaption').innerHTML=text;
 	return(text);
