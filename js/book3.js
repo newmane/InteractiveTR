@@ -95,6 +95,6 @@ function right() {
        	number++;
        	getData();
        } else {
-       	window.location.replace("../html/game2.html");
+       	window.location.replace("../html/game3.html");
        }
 }
