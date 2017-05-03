@@ -55,6 +55,7 @@ button.but {
 	margin-right: auto;
 	margin-left: auto;
 	display: block;
-	height: 50px;
-	width: 80px;
+	height: 30px;
+	width: 50px;
+	margin-bottom: 10px;
 }
