@@ -1,0 +1,46 @@
+
+h1, h2 {
+	text-align: center;
+}
+figure {
+	text-align: center;
+}
+h2 {
+	font-size: 80%;
+}
+
+#homebutton {
+	float: right;
+}
+.home {
+	width: 30%;
+	float: right;
+}
+#big {
+	text-align: center;
+	font-size: 200%;
+	font-weight: bold;
+}
+h1.pad, h2.pad {
+	padding-left: 10%;
+}
+
+.front img, .back img{
+	height: 150px;
+}
+#backcard  {
+	height: 150px;
+	width: 225px;
+	background-color: black;
+	color: white;
+	text-align: center;
+	font-size: 200%;
+	vertical-align: middle;
+	line-height: 150px;
+}
+.hidden {
+	display: none;
+}
+button {
+	width: 225px;
+}

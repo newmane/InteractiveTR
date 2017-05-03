@@ -21,6 +21,7 @@ function getData() {
 
 		if(number == 0 || number == 6) {
 			$("#image").removeClass("hidden");
+			$("#enddiv").addClass("hidden");
 			document.getElementById('enddiv').innerHTML= "";
 		}
 
@@ -40,6 +41,7 @@ function getData() {
 function clearPage() {
 	//Add open button and hide next and back
 	$("#image").addClass("hidden");
+	$("#enddiv").removeClass("hidden");
 }
 
 
@@ -76,6 +78,8 @@ function checkKey(e) {
        if(number <= 6) {
        	number++;
        	getData();
+       } else  {
+       	window.location.replace("../html/game3.html");
        }
     }
 }
@@ -90,5 +94,7 @@ function right() {
 	if(number <= 6) {
        	number++;
        	getData();
+       } else {
+       	window.location.replace("../html/game2.html");
        }
 }

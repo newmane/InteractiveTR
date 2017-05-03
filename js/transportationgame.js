@@ -19,7 +19,7 @@ $(document).ready(function () {
 
 function pickLetter() {
 	var rand = Math.floor(Math.random()*arr.length);
-	document.getElementById('letter').innerHTML = arr[rand] + " is for ...?";
+	document.getElementById('letter').innerHTML = '<h1>' + arr[rand] + " is for ...?</p>";
 	return(rand);
 }
 function pickPage() {
@@ -325,6 +325,31 @@ function checkKey(e) {
 	}
        
     }
+}
+
+function left() {
+	if(used.length > 0 && back == true && backnum != 0) {
+       	backnum--;
+       	getData(used[backnum]);	
+       } if(back == false) {
+       	back = true;
+       	backnum = used.length- 2;
+       	getData(used[backnum]);	
+       }
+}
+
+function right() {
+	if(unused.length != 0 && back == false) {
+		var page = pickPage();
+		getData(page);
+	} if(back == true) {
+		backnum++;
+		if(backnum == used.length) {
+			back = false;
+		}
+       	getData(used[backnum]);
+	}
+
 }
 
 function checkAnswer() {

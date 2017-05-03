@@ -15,17 +15,21 @@
 
 <body>
   <a id="homebutton" href="../index.html"><img class="home" src="../oldwell.jpg"></a>
-  <div id="container">
-    <h1>Transportation Game!</h1>
-    <h2>
+  <h1 class="pad">Transportation Game!</h1>
+    <h2 class="pad">
       Use the arrows to go through the pictures and match the letter to the word. Once you have found one press the up button. 
-      <h2>
+      </h2>
+  <div id="container">
     <div id="letter"></div>
     <figure id="image">
       <img id="img" src="">
       <figcaption id="imgcaption">caption</figcaption>
-      <div id="audio">audio</div>
+      <div id="audio" class="hidden">audio</div>
     </figure>
+    <button type="button" class="nav left" onClick="left();">Back</button>
+    <button type="button" class="nav center" onClick="checkAnswer();">Guess</button>
+    
+    <button type="button" class="nav right" onClick="right();">Forward</button>
   </div>
 </body>
 </html>

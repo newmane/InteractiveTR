@@ -1,6 +1,5 @@
 var number = 1;
 document.onkeydown = checkKey;
-document.onclick=movePage;
 //Buttons
 $(document).ready(function () {
 	if(number == 1) {
@@ -179,6 +178,7 @@ function initial() {
 	//Get rid of open book button and add back and next
 	$("#openbook").addClass("hidden");
 	$("#image").removeClass("hidden");
+	$("#enddiv").addClass("hidden");
 }
 
 function getTRContent(data) {
@@ -192,6 +192,7 @@ function getTRContent(data) {
 
 function clearPage() {
 	//Add open button and hide next and back
+	$("#enddiv").removeClass("hidden");
 	$("#image").addClass("hidden");
 }
 function movePage(){
@@ -223,12 +224,9 @@ function checkKey(e) {
     }
     else if (e.keyCode == '37') {
        // left arrow
-       if(number > 2) {
-       	number--;
-		getData();
-	   }
+       left();
     }
-    else if (e.keyCode == '39' || e.keyCode == '32') {
+    else if (e.keyCode == '39') {
        // right arrow
        if(number <= 31) {
        	number++;
@@ -251,8 +249,9 @@ function right() {
 	
 }
 function left() {
+	console.log(number);
 	if(number > 2) {
        	number--;
 		getData();
-	   }
+	}
 }

@@ -41,3 +41,20 @@ h2 {
 .hidden {
 	display: none;
 }
+div {
+	margin-right: auto;
+	margin-left: auto;
+	width: 90%;
+	padding: 5%;
+}
+h1.pad, h2.pad {
+	padding-left: 10%;
+}
+button.but {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	height: 50px;
+	width: 80px;
+}

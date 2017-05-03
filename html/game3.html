@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>ITR Game</title>
+  <meta name="description" content="ITR">
+  <meta name="author" content="Emily and Cari">
+
+  <link rel="stylesheet" href="../css/game3.css">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+  <script src="../js/languagegame.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <a id="homebutton" href="../index.html"><img class="home" src="../oldwell.jpg"></a>
+  <h1 class="pad"></h1>
+    <h2 class="pad">
+      Use the arrows to go through the pictures and match the letter to the word. Once you have found one press the up button. 
+      </h2>
+      <!--<button style="width:10%;" onClick="flipit();">Check</button>-->
+      <div id="container" flip:done="alert('hi')";>
+        <button onClick="help();">Check</button>
+        <div id="card"> 
+          <div class="front"> 
+            <img src="../images/china.jpg">
+          </div> 
+          <div class="back">
+            <div id="backcard">
+            <span>Ni Hao</span><audio id='audiotag' class="hidden" controls><source src='../audio/China.mp3' type='audio/mpeg'></audio>
+          </div>
+          </div> 
+        </div>
+      </div>
+</body>
+</html>
