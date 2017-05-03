@@ -25,7 +25,9 @@ function getData(number) {
   			var imgurl = $(data).find('img.thr-pic').attr("src");
 			imgurl = "http://tarheelreader.org/" + imgurl;
 			var imgnum = 'img' + tdnumber;
-			document.getElementById(imgnum).src=imgurl;
+			var i = document.getElementById(imgnum)
+			i.src=imgurl;
+			i.alt="Picture of animal"; 
 
 			var text = $(data).find('p.thr-caption').text();
 			var animal = text.substr(0,text.indexOf(' ')-1);
